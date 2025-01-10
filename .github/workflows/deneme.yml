@@ -1,0 +1,11 @@
+name: 'my deneme'
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - master
+      - development
+jobs:
+    test:
+        runs-on: ubuntu-18.04
