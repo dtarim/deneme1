@@ -1,30 +1,6 @@
-name: Dummy 
-
 on:
+  workflow_dispatch: {}
   push:
     branches:
-      - main
-      - development
-  workflow_dispatch: 
-    inputs:
-      name:
-        description: 'Your name'
-        required: true
-        default: 'World'
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        
-      
-      - name: Run a Python script
-        run: |
-          echo "print('Hello, ${{ github.event.inputs.name }}!')" > script.py
-          python script.py
+    - master
+    - development
