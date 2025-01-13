@@ -7,5 +7,10 @@ on:
       - master
       - development
 jobs:
-    test:
-        runs-on: ubuntu-18.04
+  dummy_job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Do nothing
+        run: echo > /dev/null
+ 
